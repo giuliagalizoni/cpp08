@@ -1,0 +1,10 @@
+# executables
+easyfind
+
+# object files
+obj/
+
+# config
+.claude
+.vscode
+.DS_Store
