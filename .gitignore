@@ -1,8 +1,12 @@
 # executables
 easyfind
+span
 
 # object files
 obj/
+
+# scripts
+generate_class.sh
 
 # config
 .claude
