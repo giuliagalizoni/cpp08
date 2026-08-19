@@ -1,6 +1,7 @@
 # executables
 easyfind
 span
+mutantStack
 
 # object files
 obj/
