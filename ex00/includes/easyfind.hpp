@@ -9,10 +9,9 @@ typename T::iterator easyfind(T& container, int n)
 {
 	typename T::iterator result = std::find(container.begin(), container.end(), n);
 
-	if (result != container.end())
-		return result;
-	else
+	if (result == container.end())
 		throw std::runtime_error("Not found");
+	return result;
 }
 
 template <typename T>
@@ -20,10 +19,9 @@ typename T::const_iterator easyfind(const T& container, int n)
 {
 	typename T::const_iterator result = std::find(container.begin(), container.end(), n);
 
-	if (result != container.end())
-		return result;
-	else
+	if (result == container.end())
 		throw std::runtime_error("Not found");
+	return result;
 }
 
 #endif
