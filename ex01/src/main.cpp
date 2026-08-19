@@ -1,6 +1,7 @@
 #include "../includes/Span.hpp"
 #include <iostream>
 #include <list>
+#include <cstdlib>
 
 int main()
 {
@@ -72,6 +73,32 @@ int main()
 		std::cout << "ERROR: should have thrown" << std::endl;
 	} catch (std::exception& e) {
 		std::cout << "Caught expected exception: " << e.what() << std::endl;
+	}
+
+	std::cout << std::endl << ">>>>> TEST 9: 10000 numbers <<<<<" << std::endl;
+	{
+		std::vector<int> big;
+		for (int i = 0; i < 10000; i++)
+			big.push_back(rand());
+
+		Span s9(10000);
+		s9.addNumber(big.begin(), big.end());
+
+		std::cout << "Longest span: " << s9.longestSpan() << std::endl;
+		std::cout << "Shortest span: " << s9.shortestSpan() << std::endl;
+	}
+
+	std::cout << std::endl << ">>>>> TEST 10: 1000000 numbers <<<<<" << std::endl;
+	{
+		std::vector<int> huge;
+		for (int i = 0; i < 1000000; i++)
+			huge.push_back(rand());
+
+		Span s10(1000000);
+		s10.addNumber(huge.begin(), huge.end());
+
+		std::cout << "Longest span: " << s10.longestSpan() << std::endl;
+		std::cout << "Shortest span: " << s10.shortestSpan() << std::endl;
 	}
 
 	return 0;

@@ -20,6 +20,7 @@ class Span
 
 		// Public methods
 		void addNumber(int number);
+
 		template <typename Iterator>
   		void addNumber(Iterator begin, Iterator end)
 		{
@@ -28,6 +29,7 @@ class Span
 
 			numbers.insert(numbers.end(), begin, end);
 		}
+
 		long longestSpan() const;
 		long shortestSpan() const;
 
