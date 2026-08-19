@@ -1,7 +1,3 @@
-#ifndef MUTANTSTACK_HPP
-# include "../includes/MutantStack.hpp"
-#endif
-
 // Default constructor
 template <typename T>
 MutantStack<T>::MutantStack() : std::stack<T>() {}
